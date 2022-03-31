@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    background-color: rgb(22, 22, 22);
+    color: rgb(211, 211, 211);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15pt;
+}
+
+button#invert, button#convert, button#copy{
+    cursor: pointer;
+}
+
+#input, select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15pt;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(37, 37, 37);
+    color: rgb(211, 211, 211);
+}
+
+button#invert, button#copy {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15pt;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: rgb(37, 37, 37);
+    color: rgb(211, 211, 211);
+    transition: 0.1s;
+}
+
+button#invert:hover, button#copy:hover {
+    background-color: rgb(49, 48, 48);
+    color: rgb(231, 231, 231);
+    transition: 0.1s;
+}
+
+#input {
+    width: 90%;
+}
+
+select {
+    width: 30%;;
+}
+
+div.form {
+    width: 25%;
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#output {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15pt;
+    position: relative;
+    padding: 10px;
+    width: 90%;
+    color: rgb(211, 211, 211);
+    background-color: rgb(37, 37, 37);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
