@@ -47,7 +47,7 @@ Describe your project
 ## :sparkles: Features ##
 
 :heavy_check_mark: Conversion from binary to decimal\
-:heavy_check_mark: Conversion from decimal to binary\
+:heavy_check_mark: Conversion from decimal to binary
 
 ## :rocket: Technologies ##
 
