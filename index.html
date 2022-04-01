@@ -11,10 +11,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div id="header">
+        <button id="bars" onclick="menu();"><i class="fa-solid fa-bars"></i></button>
+        <div id="list">
+            <div class="dropdown">
+                <button class="dropbtn">Conversores</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+        </div>
+    </div>
     <center>
         <div class="form">
             <div class="tooltip">
-                <span class="tooltiptext">Inverter</span>
+                <button class="tooltiptext">Inverter</span>
                 <button id="invert" onclick="invert();" title="Inverter"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
             </div>
             
@@ -37,7 +50,7 @@
             <br> <br>
             
             <input id="output" type="number" readonly placeholder="Resultado"></input><button id="copy" onclick="copy();" title="Copiar resultado"><i class="fa-solid fa-copy"></i></button>
-            <p id="extenso"></p>
+            <p id="extenso">ㅤ</p>
         </div>
     </center>
 </body>
@@ -46,52 +59,157 @@
 //     (function() {
 //         // $("#binary2").hide();
 // })();
-
-
-    String.prototype.extenso = function(c){
-        var ex = [
-            ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"],
-            ["dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"],
-            ["cem", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"],
-            ["mil", "milhão", "bilhão", "trilhão", "quadrilhão", "quintilhão", "sextilhão", "setilhão", "octilhão", "nonilhão", "decilhão", "undecilhão", "dodecilhão", "tredecilhão", "quatrodecilhão", "quindecilhão", "sedecilhão", "septendecilhão", "octencilhão", "nonencilhão"]
-        ];
-        var a, n, v, i, n = this.replace(c ? /[^,\d]/g : /\D/g, "").split(","), e = " e ", $ = "real", d = "centavo", sl;
-        for(var f = n.length - 1, l, j = -1, r = [], s = [], t = ""; ++j <= f; s = []){
-            j && (n[j] = (("." + n[j]) * 1).toFixed(2).slice(2));
-            if(!(a = (v = n[j]).slice((l = v.length) % 3).match(/\d{3}/g), v = l % 3 ? [v.slice(0, l % 3)] : [], v = a ? v.concat(a) : v).length) continue;
-            for(a = -1, l = v.length; ++a < l; t = ""){
-                if(!(i = v[a] * 1)) continue;
-                i % 100 < 20 && (t += ex[0][i % 100]) ||
-                i % 100 + 1 && (t += ex[1][(i % 100 / 10 >> 0) - 1] + (i % 10 ? e + ex[0][i % 10] : ""));
-                s.push((i < 100 ? t : !(i % 100) ? ex[2][i == 100 ? 0 : i / 100 >> 0] : (ex[2][i / 100 >> 0] + e + t)) +
-                ((t = l - a - 2) > -1 ? " " + (i > 1 && t > 0 ? ex[3][t].replace("ão", "ões") : ex[3][t]) : ""));
-            }
-            a = ((sl = s.length) > 1 ? (a = s.pop(), s.join(" ") + e + a) : s.join("") || ((!j && (n[j + 1] * 1 > 0) || r.length) ? "" : ex[0][0]));
-            a && r.push(a + (c ? (" " + (v.join("") * 1 > 1 ? j ? d + "s" : (/0{6,}$/.test(n[0]) ? "de " : "") + $.replace("l", "is") : j ? d : $)) : ""));
-        }
-        return r.join(e);
+    function menu() {
+        $('.dropdown').css({"display": "block"});
     }
 
+    String.prototype.extenso = function (c) {
+    var ex = [
+        [
+        "zero",
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+        "onze",
+        "doze",
+        "treze",
+        "quatorze",
+        "quinze",
+        "dezesseis",
+        "dezessete",
+        "dezoito",
+        "dezenove",
+        ],
+        [
+        "dez",
+        "vinte",
+        "trinta",
+        "quarenta",
+        "cinquenta",
+        "sessenta",
+        "setenta",
+        "oitenta",
+        "noventa",
+        ],
+        [
+        "cem",
+        "cento",
+        "duzentos",
+        "trezentos",
+        "quatrocentos",
+        "quinhentos",
+        "seiscentos",
+        "setecentos",
+        "oitocentos",
+        "novecentos",
+        ],
+        [
+        "mil",
+        "milhão",
+        "bilhão",
+        "trilhão",
+        "quadrilhão",
+        "quintilhão",
+        "sextilhão",
+        "setilhão",
+        "octilhão",
+        "nonilhão",
+        "decilhão",
+        "undecilhão",
+        "dodecilhão",
+        "tredecilhão",
+        "quatrodecilhão",
+        "quindecilhão",
+        "sedecilhão",
+        "septendecilhão",
+        "octencilhão",
+        "nonencilhão",
+        ],
+    ];
+    var a,
+        n,
+        v,
+        i,
+        n = this.replace(c ? /[^,\d]/g : /\D/g, "").split(","),
+        e = " e ",
+        $ = "real",
+        d = "centavo",
+        sl;
+    for (
+        var f = n.length - 1, l, j = -1, r = [], s = [], t = "";
+        ++j <= f;
+        s = []
+    ) {
+        j && (n[j] = (("." + n[j]) * 1).toFixed(2).slice(2));
+        if (
+        !((a = (v = n[j]).slice((l = v.length) % 3).match(/\d{3}/g)),
+        (v = l % 3 ? [v.slice(0, l % 3)] : []),
+        (v = a ? v.concat(a) : v)).length
+        )
+        continue;
+        for (a = -1, l = v.length; ++a < l; t = "") {
+        if (!(i = v[a] * 1)) continue;
+        (i % 100 < 20 && (t += ex[0][i % 100])) ||
+            ((i % 100) + 1 &&
+            (t +=
+                ex[1][(((i % 100) / 10) >> 0) - 1] +
+                (i % 10 ? e + ex[0][i % 10] : "")));
+        s.push(
+            (i < 100
+            ? t
+            : !(i % 100)
+            ? ex[2][i == 100 ? 0 : (i / 100) >> 0]
+            : ex[2][(i / 100) >> 0] + e + t) +
+            ((t = l - a - 2) > -1
+                ? " " + (i > 1 && t > 0 ? ex[3][t].replace("ão", "ões") : ex[3][t])
+                : "")
+        );
+        }
+        a =
+        (sl = s.length) > 1
+            ? ((a = s.pop()), s.join(" ") + e + a)
+            : s.join("") || ((!j && n[j + 1] * 1 > 0) || r.length ? "" : ex[0][0]);
+        a &&
+        r.push(
+            a +
+            (c
+                ? " " +
+                (v.join("") * 1 > 1
+                    ? j
+                    ? d + "s"
+                    : (/0{6,}$/.test(n[0]) ? "de " : "") + $.replace("l", "is")
+                    : j
+                    ? d
+                    : $)
+                : "")
+        );
+    }
+    return r.join(e);
+    };
+
     function invert() {
-        const $from = document.querySelector(".fromSelect");
-        const $to = document.querySelector(".toSelect");
+    const $from = document.querySelector(".fromSelect");
+    const $to = document.querySelector(".toSelect");
 
-        //console.log($from + "\n\n" + $to)
-
+    //console.log($from + "\n\n" + $to)
 
         if ($from.value == "binário") {
             $from.innerHTML = "<option id='decimal'>decimal</option>";
-            
+
             var $input = parseInt(document.getElementById("input").value);
             var $output = document.getElementById("output").value;
-            
+
             document.getElementById("input").value = $output;
             document.getElementById("output").value = $input;
-
         } else {
             $from.innerHTML = "<option id='binary'>binário</option>";
-
-
         }
 
         if ($to.value == "binário") {
@@ -104,87 +222,79 @@
             document.getElementById("output").value = $input;
         } else {
             $to.innerHTML = "<option id='binary'>binário</option>";
-
         }
-        
     }
 
     function output() {
-        const $from = document.querySelector(".fromSelect");
-        var $input = parseInt(document.getElementById("input").value);
-        var $output = document.getElementById("output");
-        var $extenso = document.getElementById("extenso");
-        
+    const $from = document.querySelector(".fromSelect");
+    var $input = parseInt(document.getElementById("input").value);
+    var $output = document.getElementById("output");
+    var $extenso = document.getElementById("extenso");
 
         if ($from.value == "binário") {
+            $output.value = parseInt($input, 2);
 
-            $output.value = new Intl.NumberFormat('pt-br').format(parseInt($input, 2));
-
-            $extenso.innerHTML = new Intl.NumberFormat('pt-br').format(parseInt($input, 2)).extenso();
-
+            $extenso.innerHTML = $output.value.extenso();
         } else {
             $output.value = $input.toString(2);
         }
-
     }
 
     function copy() {
-        var $output = document.getElementById("output");
+    var $output = document.getElementById("output");
 
-        $output.select();
-        // $output.setSelectionRange(0, 99999); /* For mobile devices */
+    $output.select();
+    // $output.setSelectionRange(0, 99999); /* For mobile devices */
 
-        navigator.clipboard.writeText($output.value);
+    navigator.clipboard.writeText($output.value);
 
         if ($output.value.length == 0 || $output.value == NaN) {
-            let timerInterval
+            let timerInterval;
             Swal.fire({
-            title: 'Erro',
+            title: "Erro",
             html: "Não há nada para copiar!",
             timer: 3000,
-            icon: 'error',
+            icon: "error",
             timerProgressBar: true,
             didOpen: () => {
-                const b = Swal.getHtmlContainer().querySelector('b')
+                const b = Swal.getHtmlContainer().querySelector("b");
                 timerInterval = setInterval(() => {
-                b.textContent = Swal.getTimerLeft()
-                }, 100)
+                b.textContent = Swal.getTimerLeft();
+                }, 100);
             },
             willClose: () => {
-                clearInterval(timerInterval)
-            }
+                clearInterval(timerInterval);
+            },
             }).then((result) => {
             /* Read more about handling dismissals below */
-            if (result.dismiss === Swal.DismissReason.timer) {
-                console.log('I was closed by the timer')
-            }
-            })
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log("I was closed by the timer");
+                }
+                });
         } else {
-            let timerInterval
+            let timerInterval;
             Swal.fire({
-            title: 'Copiado!',
+            title: "Copiado!",
             html: "Valor: " + $output.value,
             timer: 1500,
-            icon: 'success',
+            icon: "success",
             timerProgressBar: true,
             didOpen: () => {
-                const b = Swal.getHtmlContainer().querySelector('b')
+                const b = Swal.getHtmlContainer().querySelector("b");
                 timerInterval = setInterval(() => {
-                b.textContent = Swal.getTimerLeft()
-                }, 100)
+                b.textContent = Swal.getTimerLeft();
+                }, 100);
             },
             willClose: () => {
-                clearInterval(timerInterval)
-            }
+                clearInterval(timerInterval);
+            },
             }).then((result) => {
             /* Read more about handling dismissals below */
-            if (result.dismiss === Swal.DismissReason.timer) {
-                console.log('I was closed by the timer')
-            }
-            })
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log("I was closed by the timer");
+                }
+            });
         }
-        
     }
-
 </script>
 </html>
