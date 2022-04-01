@@ -5,19 +5,19 @@
 <h1 align="center">Calculator</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/luisgbr1el/calculator?color=green">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/luisgbr1el/calcBinToDec?color=green">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/luisgbr1el/calculator?color=green">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/luisgbr1el/calcBinToDec?color=green">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/luisgbr1el/calculator?color=green">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/luisgbr1el/calcBinToDec?color=green">
 
-  <img alt="License" src="https://img.shields.io/github/license/luisgbr1el/calculator?color=green">
+  <img alt="License" src="https://img.shields.io/github/license/luisgbr1el/calcBinToDec?color=green">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/luisgbr1el/calculator?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/luisgbr1el/calcBinToDec?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/luisgbr1el/calculator?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/luisgbr1el/calcBinToDec?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/luisgbr1el/calculator?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/luisgbr1el/calcBinToDec?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -65,7 +65,7 @@ Before starting :checkered_flag:, you need to have a text editor installed.
 
 ```bash
 # Clone this project
-$ git clone https://github.com/luisgbr1el/calculator
+$ git clone https://github.com/luisgbr1el/calcBinToDec
 
 # Access
 $ cd calculator
