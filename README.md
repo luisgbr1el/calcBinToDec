@@ -1,21 +1,17 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Calculator" />
-
-  &#xa0;
-
-  <!-- <a href="https://calculator.netlify.app">Demo</a> -->
+  <img width="80px" src="https://github.githubassets.com/images/spinners/octocat-spinner-128.gif" alt="Calculator" />
 </div>
 
 <h1 align="center">Calculator</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/luisgbr1el/calculator?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/luisgbr1el/calculator?color=green">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/luisgbr1el/calculator?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/luisgbr1el/calculator?color=green">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/luisgbr1el/calculator?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/luisgbr1el/calculator?color=green">
 
-  <img alt="License" src="https://img.shields.io/github/license/luisgbr1el/calculator?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/luisgbr1el/calculator?color=green">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/luisgbr1el/calculator?color=56BEB8" /> -->
 
@@ -50,40 +46,31 @@ Describe your project
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Conversion from binary to decimal\
+:heavy_check_mark: Conversion from decimal to binary\
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [HTML5](https://html.spec.whatwg.org/multipage/)
+- [CSS3](https://www.w3.org/TR/css3-roadmap/)
+- [JavaScript](https://www.javascript.com)
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have a text editor installed.
 
 ## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/calculator
+$ git clone https://github.com/luisgbr1el/calculator
 
 # Access
 $ cd calculator
 
-# Install dependencies
-$ yarn
-
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
+# Open index.html file
 ```
 
 ## :memo: License ##
@@ -91,7 +78,7 @@ $ yarn start
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/luisgbr1el" target="_blank">luisgbr1el</a>
 
 &#xa0;
 
