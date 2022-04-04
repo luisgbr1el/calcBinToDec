@@ -1,0 +1,133 @@
+button#invert,
+button#convert,
+button#copy {
+  cursor: pointer;
+}
+
+#input,
+select {
+  font-family: "Poppins", sans-serif;
+  font-size: 15pt;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: rgb(37, 37, 37);
+  color: rgb(211, 211, 211);
+}
+
+button#invert,
+button#copy {
+  font-family: "Poppins", sans-serif;
+  font-size: 15pt;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 10px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: rgb(37, 37, 37);
+  color: rgb(211, 211, 211);
+  transition: 0.1s;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+button#invert:hover,
+button#copy:hover {
+  background-color: rgb(49, 48, 48);
+  color: rgb(231, 231, 231);
+  transition: 0.1s;
+}
+
+#input {
+  width: 90%;
+}
+
+select {
+  width: 34%;
+}
+
+div.form {
+  width: 27%;
+  margin-top: 5%;
+  position: relative;
+  border-radius: 5px;
+  background-color: rgb(20, 20, 20);
+  padding-bottom: 70px;
+  padding-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#output {
+  font-family: "Poppins", sans-serif;
+  font-size: 15pt;
+  position: relative;
+  padding: 10px;
+  width: 90%;
+  color: rgb(211, 211, 211);
+  background-color: rgb(37, 37, 37);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-family: "Poppins", sans-serif;
+  font-size: 12pt;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 80%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+p#extenso {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+    div.form {
+      width: 90%;
+      padding: 10px;
+      left: 50%;
+      top: 23%;
+      transform: translateX(-50%);
+      position: absolute !important;
+    }
+
+    select {
+      width: 43%;
+    }
+}
