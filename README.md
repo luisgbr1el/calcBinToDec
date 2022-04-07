@@ -68,7 +68,7 @@ Before starting :checkered_flag:, you need to have a text editor installed.
 $ git clone https://github.com/luisgbr1el/calcBinToDec
 
 # Access
-$ cd calculator
+$ cd calcBinToDec
 
 # Open index.html file
 ```
